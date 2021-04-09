@@ -3,6 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Main {
+    //시간복잡도 : O(n)
+    //공간복잡도 : O(n)??
 
     public static int maxAscendingSum(int[] nums) {
         int[] sum = new int[nums.length]; //sum[6]
