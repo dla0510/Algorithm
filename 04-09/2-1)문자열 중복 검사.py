@@ -13,6 +13,7 @@ s = input()
 
 # 자료구조 ver.
 if(sorted(s)==sorted(list(set(s)))):
+	#len(s)==len(list(set(s))) 가 더 간단
     print('True')
 else:
     print('False')
