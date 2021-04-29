@@ -13,6 +13,9 @@ def Third_Max(nums):
     num_s.reverse()
     pos = 2
     result=0
+    n=len(nums)
+    if n<3:
+        return num_s[0]
     for i in range(1,len(nums)):
         if num_s[i]==num_s[i-1]:
             pos+=1
@@ -21,3 +24,10 @@ def Third_Max(nums):
     if pos>(len(nums)-1):
         result = num_s[0]
     return result
+
+def Third_Max2(nums):
+    num_s = sorted(list(set(nums)),reverse=True)
+    if len(num_s)<3:
+        return num_s[0]
+    else :
+        return num_s[2]

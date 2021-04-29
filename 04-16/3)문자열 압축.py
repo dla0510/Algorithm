@@ -42,7 +42,7 @@ def Compression(s):
 
 print(Compression(s))
     
-        
+    '''  
     길이 11짜리면 길이 10짜리면
     q는 (5,4,3,2,1)
     5일 때 i는 (0,1)
@@ -50,4 +50,4 @@ print(Compression(s))
     3일 때 i는 (0,1,2) 0:3 3:6 6:9 n/d개
     2일 때 i는 (0,1)
     1일 때 i는 (0)
-    
+    '''
