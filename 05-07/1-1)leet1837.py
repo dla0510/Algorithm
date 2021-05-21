@@ -29,3 +29,11 @@ class Solution(object):
                 n=n-p*(k**i)
                 
         return sum
+
+class Solution2(object):
+    def sumBase(self, n: int, k: int) -> int:
+        sum = 0
+        while n:
+            sum += n % k
+            n //= k
+        return sum
