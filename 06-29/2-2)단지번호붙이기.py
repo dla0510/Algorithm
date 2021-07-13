@@ -39,13 +39,13 @@ class Solution(object):
             if not visited[pos[0]][pos[1]]:
                 visited[pos[0]][pos[1]] = True
                 count += 1
-                if pos[0]>0 and m[pos[0]-1][pos[1]] == 1 and not visited[pos[0]-1][pos[1]]:
+                if pos[0]>0 and m[pos[0]-1][pos[1]] == 1:
                     stack.append((pos[0]-1,pos[1]))
-                if pos[1]>0 and m[pos[0]][pos[1]-1] == 1 and not visited[pos[0]][pos[1]-1]:
+                if pos[1]>0 and m[pos[0]][pos[1]-1] == 1:
                     stack.append((pos[0],pos[1]-1))
-                if pos[1]<num-1 and m[pos[0]][pos[1] + 1] == 1 and not visited[pos[0]][pos[1] + 1]:
+                if pos[1]<num-1 and m[pos[0]][pos[1] + 1] == 1:
                     stack.append((pos[0], pos[1] + 1))
-                if pos[0]<num-1 and m[pos[0] + 1][pos[1]] == 1 and not visited[pos[0] + 1][pos[1]]:
+                if pos[0]<num-1 and m[pos[0] + 1][pos[1]] == 1:
                     stack.append((pos[0] + 1, pos[1]))
         return count
 
