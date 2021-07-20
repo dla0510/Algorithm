@@ -21,7 +21,7 @@ def solution(n, build_frame):
                 if y==0 or [x,y-1] in columns or [x-1,y] in beams or [x,y] in beams:
                     columns.append([x,y])
             else: #삭제
-                if [x,y+1] not in columns and not([x,y+1] in beams and [x+1,y]):
+                if [x,y+1] not in columns and not(([x,y+1] in beams and ([x+1,y] not in columns and ([x+1,y] not in beams and [x-1,y] not in beams)) and not ([x-1,y+1] in beams and [x-1,y] not in columns and ([x-2,y+1] not in beams and [x,y+1] not in beams)))):
                     columns.remove([x,y])
         else: #보
             if b==1: #설치
