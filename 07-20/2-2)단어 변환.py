@@ -32,6 +32,12 @@ def solution(begin, target, words):
 w=[1,2,3]
 w.count(0)
 
+a= "dog"
+b= "dot"
+for x, y in zip(a,b):
+    print(x)
+    print(y)
+
 
 
 
