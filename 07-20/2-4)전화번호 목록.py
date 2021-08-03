@@ -26,3 +26,14 @@ for _ in range(t):
         a.append(input().strip())
     a.sort()
     check()
+
+
+
+
+
+
+
+
+
+
+
