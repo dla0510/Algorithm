@@ -10,7 +10,7 @@ Created on Tue Aug  3 20:32:50 2021
 leetCode 1937. Maximum Number of Points with Cost
 주어진 배열의 한 행마다 한 칸씩 선택해서 그 칸의 point를 가질 수 있음. 하지만 이번 행의 열과 다음 행에서 선택한 열 사이의 거리만큼 점수를 차감함. 얻을 수 있는 maximum points를 반환하라.
 '''
-
+#실패 Dynamic Programming 사용해야
 def maxPoints(points):
     answer = 0
     c1=0
@@ -20,6 +20,7 @@ def maxPoints(points):
         
         if i==0:
             answer+=max(points[0])
+            res_list = list(filter(lambda x: points[x] == answer, range(len(points))))
             c1=points[0].index(answer)
             continue
                 
