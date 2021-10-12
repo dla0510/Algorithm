@@ -24,3 +24,4 @@ def solution(k, room_number):
                     answer.append(i)
                     break
     return answer
+
