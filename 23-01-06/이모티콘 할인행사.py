@@ -18,7 +18,7 @@ def solution(users, emoticons):
     max_total_amount = 0
 
     for sale_percentage in result:
-        users_join = [False] * l_u
+        join = 0
         total_amount = 0
 
         for i in range(l_u):
@@ -34,11 +34,9 @@ def solution(users, emoticons):
             # if sale_percentage == (40,40,20,40):
             #     print('현재 이모티콘 구매 비용과 목표 비용 ', amount, target_amount)
             if amount >= target_amount:
-                users_join[i] = True
+                join += 1
             else:
                 total_amount += amount
-
-            join = sum(users_join)
 
             # print(max_join, max_total_amount)
             # print(sale_percentage)
@@ -46,7 +44,6 @@ def solution(users, emoticons):
             # print('--------------------------------')
 
         if join>max_join or (join>=max_join and total_amount>max_total_amount):
-            print(sale_percentage)
             max_join = join
             max_total_amount = total_amount
 
